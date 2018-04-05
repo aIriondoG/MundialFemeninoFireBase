@@ -1,0 +1,26 @@
+page-clasificacion {
+    .inicio{
+        background-image: url("../../assets/imgs/futbol2.jpg");
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-attachment:fixed;
+        -o-background-size: 100% 100%, auto;
+        -moz-background-size: 100% 100%, auto;
+        -webkit-background-size: 100% 100%, auto;
+        background-size: 100% 100%, auto;
+        color:white;
+
+        //background-color: red;
+    }
+    .btn{
+        background-color:rgba(0, 0, 0,0.4);
+        text-align:center;
+        color:white;
+    }
+    .lista{
+        margin-top: 4em;
+        margin-left: 4em;
+        margin-right: 4em;
+        
+    }
+}

@@ -1,0 +1,87 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Detalles del Equipo</ion-title>
+    </ion-navbar>
+    
+</ion-header>
+
+
+<ion-content class="inicio">
+
+    <p></p>
+    <ion-list class="lista">
+            <ion-item   class="nom">
+                    <h3 text-center text-uppercase class="nom_text">
+                        <img src="../../assets/imgs/Banderas/{{sItem.country}}.png" alt="Imagen del equipo" width="30" height="15"> 
+                         {{sItem.country}}
+                    </h3>
+                </ion-item>
+        <!--<table ion-item border="1" style="margin: 0 auto;" class="lista" >
+        <tr class="nom">
+            
+                <img src="../../assets/imgs/Banderas/{{sItem.country}}.png" alt="Imagen del equipo" width="30" height="15"> {{sItem.country}}
+            
+        </tr>
+        <tr>
+            <td> Partidos jugados</td>
+            <td> {{sItem.wins+sItem.draws+sItem.losses}}</td>
+        </tr>
+        <tr>
+            <td> Partidos ganados</td>
+            <td> {{sItem.wins}}</td>
+        </tr>
+        <tr>
+            <td> Partidos empatados</td>
+            <td> {{sItem.draws}}</td>
+        </tr>
+        <tr>
+            <td> Partidos perdidos</td>
+            <td> {{sItem.losses}}</td>
+        </tr>
+        <tr>
+            <td> Goles Marcados</td>
+            <td> {{sItem.goals_for}}</td>
+        </tr>
+        <tr>
+            <td> Goles encajados</td>
+            <td> {{sItem.goals_against}}</td>
+        </tr>
+        <tr>
+            <td> Gol-Average</td>
+            <td> {{sItem.goals_for-sItem.goals_against}}</td>
+        </tr>
+    </table>-->
+     
+        <ion-item  class="datos">
+            Partidos ganados: {{sItem.wins}}
+        </ion-item>
+        <ion-item class="datos">
+            Partidos empatados: {{sItem.draws}}
+        </ion-item>
+        <ion-item class="datos">
+            Partidos perdidos: {{sItem.losses}}
+        </ion-item>
+        <ion-item class="datos">
+            Partidos jugados: {{sItem.wins+sItem.draws+sItem.losses}}
+        </ion-item>
+        <ion-item class="datos">
+            Goles marcados: {{sItem.goals_for}}
+        </ion-item>
+        <ion-item class="datos">
+            Goles encajados: {{sItem.goals_against}}
+        </ion-item>
+        <ion-item class="datos">
+            Diferencia de goles: {{sItem.goals_for-sItem.goals_against}}
+        </ion-item>
+        
+    </ion-list>
+    <!--<ul text_center>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>-->
+
+</ion-content>
