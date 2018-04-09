@@ -36,7 +36,7 @@ export class EquiposPage {
   presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Cargando equipos...",
-      duration: 2000
+      duration: 500
     });
     loader.present();
   }

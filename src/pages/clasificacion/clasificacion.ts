@@ -83,7 +83,7 @@ export class ClasificacionPage {
   presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Cargando grupos...",
-      duration: 3000
+      duration: 1500
     });
     loader.present();
   }

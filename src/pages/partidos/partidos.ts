@@ -48,7 +48,7 @@ export class PartidosPage {
   presentToast() {
     let toast = this.toastCtrl.create({
       message: 'Los partidos aun no han sido cargados, vuelve a clickar en el grupo',
-      duration: 5000,
+      duration: 200,
       position: 'middle'
     });
 
@@ -62,7 +62,7 @@ export class PartidosPage {
   presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Cargando partidos...",
-      duration: 3000
+      duration: 2000
     });
     loader.present();
   }
