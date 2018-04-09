@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import {HttpClientModule} from '@angular/common/http';
 //Importacion de paginas
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -14,6 +13,8 @@ import { PartidosDetailsPage } from '../pages/partidos-details/partidos-details'
 import { TabsPage } from '../pages/tabs/tabs';
 import {ClasificacionPage} from '../pages/clasificacion/clasificacion';
 import {ClasificacionDetailsPage} from "../pages/clasificacion-details/clasificacion-details";
+//Importacion de pipe/ordenar
+import { SortPipe } from '../pipes/sort/sort';
 //Importacion de AngularFireBase2 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -37,7 +38,8 @@ export const config = {
     EquipoDetailsPage,
     PartidosDetailsPage,
     ClasificacionPage,
-    ClasificacionDetailsPage
+    ClasificacionDetailsPage,
+    SortPipe
 
   ],
   imports: [

@@ -1,20 +1,26 @@
 page-equipos {
    
     ion-card {
-        background-color: rgba(0,0,0,0.0);
+        position: relative;
+        text-align: center;
+        //text-align: start;
       }
       .carta{
         background-color: rgba(0,0,0,0.0);
+        width: 80%;
+        height: 100%;
+        left: 7%;
       }
       .card-title {
         position: relative;
-        top: 35%;
         font-size: 1.5em;
+        //top:-50%;
         width: 100%;
         font-weight: bold;
         color:white;
         background-color: rgba(0,0,0,0.4);
       }
+    
     .inicio{
         background-image: url("../../assets/imgs/futbol4.jpg");
         background-repeat:no-repeat;
@@ -34,11 +40,13 @@ page-equipos {
         color:white;
         //opacity: 0.8;
     }
+
     .nom{
         //background-color: black;
-        background-color:rgba(0,0,0,0.3); /* rgbA */
+        background-color:rgba(0,0,0,0.0); /* rgbA */
         //color:white;
-    }
+    }:hover
+   
     .btn{
         background-color: rgba(0,0,0,0.5);
         color: white;

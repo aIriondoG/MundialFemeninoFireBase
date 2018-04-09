@@ -15,7 +15,7 @@ export class PartidosPage {
   date: string;
   nPartidos: any;
   listaPartidos: AngularFireList<any>;
-  partido: Observable<any[]>;
+  partido: any[];
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -48,7 +48,7 @@ export class PartidosPage {
   presentToast() {
     let toast = this.toastCtrl.create({
       message: 'Los partidos aun no han sido cargados, vuelve a clickar en el grupo',
-      duration: 10000,
+      duration: 5000,
       position: 'middle'
     });
 

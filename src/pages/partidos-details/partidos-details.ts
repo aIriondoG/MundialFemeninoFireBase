@@ -9,7 +9,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PartidosDetailsPage {
   //sItem: any;
-  sEventoLocal : any;
+  sEventoLocal: any;
   sEventoVisitante: any;
   eventos: any;
   sItem: any[];

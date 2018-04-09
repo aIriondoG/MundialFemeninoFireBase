@@ -27,8 +27,13 @@
     </button>-->
     <ion-content>
       <ion-list>
-        <ion-item *ngFor="let i of equipo">
-          {{i.country}}
-        </ion-item>
+          <ion-item *ngIf=" equipo.group_id == grupo ">
+              {{equipo.group_letter}}
+          </ion-item>
+        <div *ngFor="let i of equipo">
+          <!-- | sort: {property: column, order: 1}-->
+          <p>{{i.country}}</p>
+         
+        </div>
       </ion-list>
   </ion-content>

@@ -21,29 +21,67 @@
   </ion-item-group>
 </ion-content>-->
   <ion-list class="lista">
-   <!-- <ion-item>
+    <ion-item>
       Grupo A
     </ion-item>
-    <div *ngFor="let e of equipo | async">
+    <div *ngFor="let e of equipoA " (click)="itemTapped()">
+      <button ion-item no-lines *ngIf=" e.group_id == 1" (click)="itemTapped($event, e)" class="bot">
+        <img src="../../assets/imgs/Banderas/{{e.country}}.png" alt="Imagen del equipo" width="30" height="15"> {{e.country}} -- {{e.points}}
 
-      <ion-item *ngIf=" e.group_id == 1 ">
-        {{e.country}}
-      </ion-item>
+      </button>
+
     </div>
     <br>
     <ion-item>
       Grupo B
     </ion-item>
-    <div *ngFor="let e of equipo | async">
-      <ion-item *ngIf=" e.group_id == 2 ">
-        {{e.country}}
-      </ion-item>
-    </div>-->
-    <div *ngFor="let e of equipo | async">
-      <ion-item>
-        {{e.group_letter}}
-      </ion-item>
+    <div *ngFor="let e of equipoA ">
+      <button ion-item no-lines *ngIf=" e.group_id == 2" (click)="itemTapped($event, e)" class="bot">
+        <img src="../../assets/imgs/Banderas/{{e.country}}.png" alt="Imagen del equipo" width="30" height="15"> {{e.country}} -- {{e.points}}
+
+      </button>
     </div>
+    <br>
+    <ion-item>
+      Grupo C
+    </ion-item>
+    <div *ngFor="let e of equipoA ">
+      <button ion-item no-lines *ngIf=" e.group_id == 3" (click)="itemTapped($event, e)" class="bot">
+        <img src="../../assets/imgs/Banderas/{{e.country}}.png" alt="Imagen del equipo" width="30" height="15"> {{e.country}} -- {{e.points}}
+
+      </button>
+    </div>
+    <br>
+    <ion-item>
+      Grupo D
+    </ion-item>
+    <div *ngFor="let e of equipoA ">
+      <button ion-item no-lines *ngIf=" e.group_id == 4" (click)="itemTapped($event, e)" class="bot">
+        <img src="../../assets/imgs/Banderas/{{e.country}}.png" alt="Imagen del equipo" width="30" height="15"> {{e.country}} -- {{e.points}}
+
+      </button>
+    </div>
+    <br>
+    <ion-item>
+      Grupo E
+    </ion-item>
+    <div *ngFor="let e of equipoA ">
+      <button ion-item no-lines *ngIf=" e.group_id == 5" (click)="itemTapped($event, e)" class="bot">
+        <img src="../../assets/imgs/Banderas/{{e.country}}.png" alt="Imagen del equipo" width="30" height="15"> {{e.country}} -- {{e.points}}
+
+      </button>
+    </div>
+    <br>
+    <ion-item>
+      Grupo F
+    </ion-item>
+    <div *ngFor="let e of equipoA  ">
+      <button ion-item no-lines *ngIf=" e.group_id == 6" (click)="itemTapped($event, e)" class="bot">
+        <img src="../../assets/imgs/Banderas/{{e.country}}.png" alt="Imagen del equipo" width="30" height="15"> {{e.country}} -- {{e.points}}
+
+      </button>
+    </div>
+    <br>
 
 
 

@@ -6,31 +6,79 @@ import { LoadingController } from 'ionic-angular';
 import { ClasificacionDetailsPage } from '../clasificacion-details/clasificacion-details';
 //Importacion de afb2
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Observable } from '@firebase/util';
+import { EquipoDetailsPage } from '../equipo-details/equipo-details';
+//Importacion de ordenar
+//import { Ordenar } from '../../app/pipes/miPipe';
 
 @IonicPage()
 @Component({
   selector: 'page-clasificacion',
   templateUrl: 'clasificacion.html',
+
 })
 export class ClasificacionPage {
 
   listaEquipos: AngularFireList<any>;
-  equipo: any[];
-  equipoA : any[];
-  j: number;
+  equipo: Observable<any[]>;
+  equipoA: any;
+  items: any;
+  falso: boolean;
+  name: string = "";
+
+  descending: boolean = false;
+  order: number;
+  column: String = 'name';
+  //punteroPunt: number;
+  verdadero: boolean;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public afDatabase: AngularFireDatabase,
     public loadingCtrl: LoadingController
   ) {
-    //this.j=0;
+    this.falso = false;
+    this.items = [];
     this.listaEquipos = this.afDatabase.list('/Equipos');
     this.equipo = this.listaEquipos.valueChanges();
-    this.j = this.equipo.length;
+
+    this.equipo.subscribe(
+      (data) => {
+        console.log(data);
+        this.equipoA = data;
+        console.log("Antes: " + this.equipoA);
+        //this.cargaGrupos();
+        this.equipoA.sort((a, b) => {
+
+
+          if (a.points < b.points) {
+            return 1;
+          }
+          else if (a.points > b.points) {
+            return -1;
+          }
+          else {
+            return 0;
+
+          }
+
+        }
+        );
+        //console.log("Despues: " + this.equipoA);
+      }
+    );
+
+
+
     //this.rellenoEquipoA();
     this.presentLoading();
-    
+    //this.cargaGrupos();
+
+
+  }
+  sort() {
+    this.descending = !this.descending;
+    this.order = this.descending ? 1 : -1;
   }
   presentLoading() {
     let loader = this.loadingCtrl.create({
@@ -39,12 +87,16 @@ export class ClasificacionPage {
     });
     loader.present();
   }
-  itemTapped(event) {
-    this.navCtrl.push(ClasificacionDetailsPage, {
-      equipo: this.equipo
-    });
+  itemTapped(event, e) {
+    if (e != null) {
+      this.navCtrl.push(EquipoDetailsPage, {
+        equipos: e
+      });
+    } else {
+      console.log("E = null");
+    }
   }
- 
+
 }
 
 

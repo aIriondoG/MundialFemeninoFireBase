@@ -17,8 +17,10 @@ export class ClasificacionDetailsPage {
   items: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     //this.equipo =[];
-    //this.grupo = navParams.get('numeroGrupo');
-    this.equipo = navParams.get('equipo');
+    this.grupo = navParams.get('grp');
+    this.equipo = navParams.get('equipoA');
+    console.log("--//"+this.equipo);
+    console.log(this.grupo);
     
   }
 }
